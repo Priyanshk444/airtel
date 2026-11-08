@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/components/bundlecard.tsx","./src/components/guidedadvisor.tsx","./src/pages/advisor.tsx","./src/pages/checkout.tsx","./src/pages/home.tsx","./src/pages/kyc.tsx","./src/pages/partner.tsx","./src/pages/placeholder.tsx","./src/pages/quote.tsx","./src/pages/track.tsx"],"version":"5.9.3"}

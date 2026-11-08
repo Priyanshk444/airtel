@@ -1,0 +1,15 @@
+# Pinned to the versions the 160 tests and the docs were produced with.
+# The propensity model's held-out numbers (AUC 0.689, lift 2.16x) depend on these exact versions.
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+pydantic==2.14.3
+pandas==2.3.3
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+anthropic==2.6.0
+python-multipart==0.0.32
+rapidfuzz==3.14.5
+pillow==12.3.0
+httpx==0.28.1
+pytest==9.2.0

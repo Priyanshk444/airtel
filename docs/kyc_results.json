@@ -1,0 +1,2231 @@
+[
+  {
+    "applicant": "K01",
+    "business": "Vindhya Tours & Travels",
+    "overall": "failed",
+    "flags": [
+      [
+        "gstin_status",
+        "fail",
+        "GST registration is cancelled in the registry. GST-only products cannot be sold; the customer can continue with Udyam or other documents for the rest of the bundle."
+      ],
+      [
+        "udyam_format",
+        "fail",
+        "The Udyam certificate has no registration number printed on it."
+      ]
+    ],
+    "summary": "We could not verify the business yet: GST registration is cancelled in the registry. GST-only products cannot be sold; the customer can continue with Udyam or other documents for the rest of the bundle.; The Udyam certificate has no registration number printed on it.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 37**********1ZS has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 37**********1ZS is registered to Neha Kaur (Prop. Vindhya Tours & Travels) in Andhra Pradesh.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "fail",
+        "reason": "GST registration is cancelled in the registry. GST-only products cannot be sold; the customer can continue with Udyam or other documents for the rest of the bundle.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 37 = Andhra Pradesh, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********7L embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "fail",
+        "reason": "The Udyam certificate has no registration number printed on it.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Vindhya Tours & Travels' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****90 is valid until 2028-03-26.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Neha Kaur is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 19 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 19
+        }
+      }
+    ],
+    "seconds": 18.4
+  },
+  {
+    "applicant": "K02",
+    "business": "Harmony Dental Care",
+    "overall": "needs_review",
+    "flags": [
+      [
+        "quality_gst_certificate",
+        "review",
+        "The GST certificate is skewed (reader confidence 50%). Values read from it will be double-checked by our team; a clearer photo speeds this up."
+      ],
+      [
+        "gstin_format",
+        "review",
+        "GSTIN as printed fails the format check (position 4: 0 -> O). It looks like a letter/digit mix-up; 19**********1ZL passes the checksum and was used for the registry lookup. Please confirm with the customer."
+      ]
+    ],
+    "summary": "A few things need a quick look by our team: The GST certificate is skewed (reader confidence 50%). Values read from it will be double-checked by our team; a clearer photo speeds this up.; GSTIN as printed fails the format check (position 4: 0 -> O). It looks like a letter/digit mix-up; 19**********1ZL passes the checksum and was used for the registry lookup. Please confirm with the customer.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "quality_gst_certificate",
+        "title": "Image quality: GST certificate",
+        "status": "review",
+        "reason": "The GST certificate is skewed (reader confidence 50%). Values read from it will be double-checked by our team; a clearer photo speeds this up.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legibility": "skewed",
+          "confidence": 0.5
+        }
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "review",
+        "reason": "GSTIN as printed fails the format check (position 4: 0 -> O). It looks like a letter/digit mix-up; 19**********1ZL passes the checksum and was used for the registry lookup. Please confirm with the customer.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "as_read": "19**********1ZL",
+          "candidate": "19**********1ZL",
+          "substitutions": [
+            "position 4: 0 -> O"
+          ]
+        }
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 19**********1ZL is registered to Joseph Shah (Prop. Harmony Dental Care) in West Bengal.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 19 = West Bengal, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********5Y embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-WB-00-*****30 is well-formed and its state code WB matches West Bengal.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Harmony Dental Care (Small, Services) in Kolkata.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Harmony Dental Care' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****07 is valid until 2028-09-10.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Joseph Shah is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 54 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 54
+        }
+      }
+    ],
+    "seconds": 15.6
+  },
+  {
+    "applicant": "K03",
+    "business": "Ganesh Woodcraft",
+    "overall": "verified",
+    "flags": [],
+    "summary": "All checks passed. Your business is verified and the order can move to installation.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 27**********1ZP has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 27**********1ZP is registered to Joseph Singh (Prop. Ganesh Woodcraft) in Maharashtra.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 27 = Maharashtra, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********7D embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-MH-00-*****96 is well-formed and its state code MH matches Maharashtra.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Ganesh Woodcraft (Micro, Manufacturing) in Nagpur.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Ganesh Woodcraft' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****89 is valid until 2028-07-04.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Joseph Singh is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 46 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 46
+        }
+      }
+    ],
+    "seconds": 11.0
+  },
+  {
+    "applicant": "K04",
+    "business": "Saffron Dental Care LLP",
+    "overall": "needs_review",
+    "flags": [
+      [
+        "quality_gst_certificate",
+        "review",
+        "The GST certificate is blurred (reader confidence 50%). Values read from it will be double-checked by our team; a clearer photo speeds this up."
+      ],
+      [
+        "gstin_format",
+        "review",
+        "GSTIN as printed fails the format check (position 12: 0 -> O; position 14: 2 -> Z). It looks like a letter/digit mix-up; 27**********1ZH passes the checksum and was used for the registry lookup. Please confirm with the customer."
+      ]
+    ],
+    "summary": "A few things need a quick look by our team: The GST certificate is blurred (reader confidence 50%). Values read from it will be double-checked by our team; a clearer photo speeds this up.; GSTIN as printed fails the format check (position 12: 0 -> O; position 14: 2 -> Z). It looks like a letter/digit mix-up; 27**********1ZH passes the checksum and was used for the registry lookup. Please confirm with the customer.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "quality_gst_certificate",
+        "title": "Image quality: GST certificate",
+        "status": "review",
+        "reason": "The GST certificate is blurred (reader confidence 50%). Values read from it will be double-checked by our team; a clearer photo speeds this up.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legibility": "blurred",
+          "confidence": 0.5
+        }
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "review",
+        "reason": "GSTIN as printed fails the format check (position 12: 0 -> O; position 14: 2 -> Z). It looks like a letter/digit mix-up; 27**********1ZH passes the checksum and was used for the registry lookup. Please confirm with the customer.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "as_read": "27**********12H",
+          "candidate": "27**********1ZH",
+          "substitutions": [
+            "position 12: 0 -> O",
+            "position 14: 2 -> Z"
+          ]
+        }
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 27**********1ZH is registered to Saffron Dental Care LLP in Maharashtra.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 27 = Maharashtra, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********6O embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-MH-00-*****36 is well-formed and its state code MH matches Maharashtra.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Saffron Dental Care LLP (Micro, Services) in Nagpur.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Saffron Dental Care LLP' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****96 is valid until 2028-08-03.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Fatima Pillai signs as 'partner' for a limited liability partnership and matches the contact on record.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 48 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 48
+        }
+      }
+    ],
+    "seconds": 10.9
+  },
+  {
+    "applicant": "K05",
+    "business": "Balaji Realty LLP",
+    "overall": "verified",
+    "flags": [],
+    "summary": "All checks passed. Your business is verified and the order can move to installation.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present. Not provided (optional for this path): Udyam certificate.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 32**********1Z1 has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 32**********1Z1 is registered to Balaji Realty LLP in Kerala.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 32 = Kerala, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********1U embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "not_applicable",
+        "reason": "No Udyam certificate provided; not required on the GSTIN path.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Balaji Realty LLP' appears consistently on all 3 documents.",
+        "documents": [
+          "GST trade name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****34 is valid until 2029-09-11.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Anita Shah signs as 'owner' for a limited liability partnership and matches the contact on record.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 34 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 34
+        }
+      }
+    ],
+    "seconds": 6.3
+  },
+  {
+    "applicant": "K06",
+    "business": "Saffron Unisex Salon",
+    "overall": "failed",
+    "flags": [
+      [
+        "gstin_format",
+        "fail",
+        "GSTIN 08**********1Z0 is not a valid GSTIN (structure or checksum is wrong). Ask for a clear photo of the certificate."
+      ]
+    ],
+    "summary": "We could not verify the business yet: GSTIN 08**********1Z0 is not a valid GSTIN (structure or checksum is wrong). Ask for a clear photo of the certificate.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "fail",
+        "reason": "GSTIN 08**********1Z0 is not a valid GSTIN (structure or checksum is wrong). Ask for a clear photo of the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "not_applicable",
+        "reason": "Skipped because no valid GSTIN was available.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "not_applicable",
+        "reason": "Skipped: no valid GSTIN.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-RJ-00-*****57 is well-formed and its state code RJ matches Rajasthan.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Saffron Unisex Salon (Micro, Trading) in Jaipur.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Saffron Unisex Salon' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****54 is valid until 2028-09-15.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Pooja Shah is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 34 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 34
+        }
+      }
+    ],
+    "seconds": 8.2
+  },
+  {
+    "applicant": "K07",
+    "business": "Neelgiri Physio Clinic",
+    "overall": "failed",
+    "flags": [
+      [
+        "pan_consistency",
+        "fail",
+        "PAN name letter 'N' does not match: Shri Physio Clinic."
+      ],
+      [
+        "name_consistency",
+        "fail",
+        "The legal name says the business is 'shri physio clinic' but the trade name is 'neelgiri physio clinic'."
+      ]
+    ],
+    "summary": "We could not verify the business yet: PAN name letter 'N' does not match: Shri Physio Clinic.; The legal name says the business is 'shri physio clinic' but the trade name is 'neelgiri physio clinic'.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 07**********1ZT has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 07**********1ZT is registered to Neha Banerjee (Prop. Neelgiri Physio Clinic) in Delhi.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 92,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 07 = Delhi, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "fail",
+        "reason": "PAN name letter 'N' does not match: Shri Physio Clinic.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {
+          "pan": "********8P"
+        }
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-DL-00-*****47 is well-formed and its state code DL matches Delhi.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Neelgiri Physio Clinic (Small, Services) in Delhi.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "fail",
+        "reason": "The legal name says the business is 'shri physio clinic' but the trade name is 'neelgiri physio clinic'.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****37 is valid until 2030-05-05.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Neha Banerjee is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 10 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 10
+        }
+      }
+    ],
+    "seconds": 11.4
+  },
+  {
+    "applicant": "K08",
+    "business": "Green Leaf Legal Associates",
+    "overall": "needs_review",
+    "flags": [
+      [
+        "gstin_format",
+        "review",
+        "GSTIN as printed fails the format check (position 4: 0 -> O). It looks like a letter/digit mix-up; 24**********1Z3 passes the checksum and was used for the registry lookup. Please confirm with the customer."
+      ]
+    ],
+    "summary": "A few things need a quick look by our team: GSTIN as printed fails the format check (position 4: 0 -> O). It looks like a letter/digit mix-up; 24**********1Z3 passes the checksum and was used for the registry lookup. Please confirm with the customer.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "review",
+        "reason": "GSTIN as printed fails the format check (position 4: 0 -> O). It looks like a letter/digit mix-up; 24**********1Z3 passes the checksum and was used for the registry lookup. Please confirm with the customer.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "as_read": "24**********1Z3",
+          "candidate": "24**********1Z3",
+          "substitutions": [
+            "position 4: 0 -> O"
+          ]
+        }
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 24**********1Z3 is registered to Joseph Rao (Prop. Green Leaf Legal Associates) in Gujarat.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 24 = Gujarat, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********5M embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-GJ-00-*****45 is well-formed and its state code GJ matches Gujarat.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Green Leaf Legal Associates (Small, Services) in Vadodara.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Green Leaf Legal Associates' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****48 is valid until 2027-09-18.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Joseph Rao is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 50 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 50
+        }
+      }
+    ],
+    "seconds": 8.7
+  },
+  {
+    "applicant": "K09",
+    "business": "Kaveri Insurance Advisors",
+    "overall": "verified",
+    "flags": [],
+    "summary": "All checks passed. Your business is verified and the order can move to installation.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 37**********1ZB has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 37**********1ZB is registered to Anita Kulkarni (Prop. Kaveri Insurance Advisors) in Andhra Pradesh.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 37 = Andhra Pradesh, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********6F embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-AP-00-*****62 is well-formed and its state code AP matches Andhra Pradesh.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Kaveri Insurance Advisors (Micro, Services) in Visakhapatnam.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Kaveri Insurance Advisors' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****40 is valid until 2027-12-22.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Anita Kulkarni is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 5 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 5
+        }
+      }
+    ],
+    "seconds": 13.4
+  },
+  {
+    "applicant": "K10",
+    "business": "Kaveri Stays LLP",
+    "overall": "needs_review",
+    "flags": [
+      [
+        "signatory_authority",
+        "review",
+        "Nisha Arora signs as 'owner' for a limited liability partnership, but 'owner' is not a signing role for this entity type and the person is not the contact on record. A partner/board resolution naming the signatory is needed."
+      ]
+    ],
+    "summary": "A few things need a quick look by our team: Nisha Arora signs as 'owner' for a limited liability partnership, but 'owner' is not a signing role for this entity type and the person is not the contact on record. A partner/board resolution naming the signatory is needed.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 27**********1ZL has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 27**********1ZL is registered to Kaveri Stays LLP in Maharashtra.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 27 = Maharashtra, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********8U embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-MH-00-*****41 is well-formed and its state code MH matches Maharashtra.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Kaveri Stays LLP (Small, Trading) in Mumbai.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Kaveri Stays LLP' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****42 is valid until 2029-06-01.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "review",
+        "reason": "Nisha Arora signs as 'owner' for a limited liability partnership, but 'owner' is not a signing role for this entity type and the person is not the contact on record. A partner/board resolution naming the signatory is needed.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 27 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 27
+        }
+      }
+    ],
+    "seconds": 10.5
+  },
+  {
+    "applicant": "K11",
+    "business": "Trinity Bake House Pvt Ltd",
+    "overall": "failed",
+    "flags": [
+      [
+        "address_proof_recent",
+        "fail",
+        "The bill is 257 days old; address proof must be no older than 90 days. Please upload a recent bill."
+      ]
+    ],
+    "summary": "We could not verify the business yet: The bill is 257 days old; address proof must be no older than 90 days. Please upload a recent bill.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 03**********1ZZ has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 03**********1ZZ is registered to Trinity Bake House Pvt Ltd in Punjab.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 03 = Punjab, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********0R embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-PB-00-*****78 is well-formed and its state code PB matches Punjab.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Trinity Bake House Pvt Ltd (Micro, Trading) in Ludhiana.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Trinity Bake House Pvt Ltd' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****12 is valid until 2028-12-23.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Vikram Pillai signs as 'owner' for a private limited company and matches the contact on record.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "fail",
+        "reason": "The bill is 257 days old; address proof must be no older than 90 days. Please upload a recent bill.",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 257
+        }
+      }
+    ],
+    "seconds": 9.5
+  },
+  {
+    "applicant": "K12",
+    "business": "Star Electronics",
+    "overall": "verified",
+    "flags": [],
+    "summary": "All checks passed. Your business is verified and the order can move to installation.",
+    "checks": [
+      {
+        "code": "documents_present",
+        "title": "Required documents uploaded",
+        "status": "pass",
+        "reason": "All documents required for the gstin path are present.",
+        "documents": [],
+        "details": {}
+      },
+      {
+        "code": "gstin_format",
+        "title": "GSTIN format and checksum",
+        "status": "pass",
+        "reason": "GSTIN 37**********1ZU has the correct 15-character structure and checksum.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_registry",
+        "title": "GSTIN found in GST registry",
+        "status": "pass",
+        "reason": "GSTIN 37**********1ZU is registered to Pooja Agarwal (Prop. Star Electronics) in Andhra Pradesh.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_status",
+        "title": "GSTIN status",
+        "status": "pass",
+        "reason": "GST registration is active.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gst_certificate_matches_registry",
+        "title": "Certificate details match the registry",
+        "status": "pass",
+        "reason": "Legal name, trade name and address on the certificate match the registry record.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {
+          "legal_name": 100,
+          "trade_name": 100,
+          "address": 100
+        }
+      },
+      {
+        "code": "gst_registration_date",
+        "title": "Registration date matches the registry",
+        "status": "pass",
+        "reason": "Date of liability on the certificate matches the registry.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "gstin_state_code",
+        "title": "GSTIN state code matches the address",
+        "status": "pass",
+        "reason": "State code 37 = Andhra Pradesh, which matches the address on the certificate.",
+        "documents": [
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "pan_consistency",
+        "title": "PAN inside the GSTIN matches the other documents",
+        "status": "pass",
+        "reason": "PAN ********5E embedded in the GSTIN is consistent with the business name on every document.",
+        "documents": [
+          "gst_certificate",
+          "udyam_certificate",
+          "address_proof"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_format",
+        "title": "Udyam registration number",
+        "status": "pass",
+        "reason": "UDYAM-AP-00-*****72 is well-formed and its state code AP matches Andhra Pradesh.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_registry",
+        "title": "Udyam number found in registry",
+        "status": "pass",
+        "reason": "Registered to Star Electronics (Micro, Trading) in Visakhapatnam.",
+        "documents": [
+          "udyam_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "udyam_gstin_consistency",
+        "title": "Udyam and GSTIN describe the same business",
+        "status": "pass",
+        "reason": "Udyam and GST records agree on name, state and city.",
+        "documents": [
+          "udyam_certificate",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "name_consistency",
+        "title": "Business name is consistent across documents",
+        "status": "pass",
+        "reason": "'Star Electronics' appears consistently on all 4 documents.",
+        "documents": [
+          "GST trade name",
+          "Udyam enterprise name",
+          "business on signatory ID",
+          "name on bill"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_id_valid",
+        "title": "Signatory ID is valid",
+        "status": "pass",
+        "reason": "ID SYN-ID-****12 is valid until 2029-03-03.",
+        "documents": [
+          "signatory_id"
+        ],
+        "details": {}
+      },
+      {
+        "code": "signatory_authority",
+        "title": "Signatory is authorised for this business",
+        "status": "pass",
+        "reason": "Pooja Agarwal is the proprietor named on the GST certificate.",
+        "documents": [
+          "signatory_id",
+          "gst_certificate"
+        ],
+        "details": {}
+      },
+      {
+        "code": "address_consistency",
+        "title": "Address proof matches the registered address",
+        "status": "pass",
+        "reason": "The utility bill is for the same address as the GST registration.",
+        "documents": [
+          "address_proof",
+          "gst_certificate"
+        ],
+        "details": {
+          "similarity": 100,
+          "pin_match": true
+        }
+      },
+      {
+        "code": "address_proof_recent",
+        "title": "Address proof is recent",
+        "status": "pass",
+        "reason": "The bill is 9 days old (limit 90).",
+        "documents": [
+          "address_proof"
+        ],
+        "details": {
+          "days_old": 9
+        }
+      }
+    ],
+    "seconds": 10.5
+  }
+]

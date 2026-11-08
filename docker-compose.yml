@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - path: .env
+        required: false   # runs without a key: guided advisor + sample KYC documents
+    environment:
+      - UDYAM_DATA_DIR=/data
+      - UDYAM_DB_PATH=/var/udyam/app.sqlite
+    volumes:
+      - ./data:/data:ro
+      - udyam_db:/var/udyam
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  udyam_db:
